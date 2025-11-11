@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Rascal Wagon - Pet Taxi Service</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fffaf5;
+      color: #333;
+    }
+
+    header {
+      background-color: #c85a21;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    header img {
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .booking-form {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #c85a21;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #a84717;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-info {
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="rascal_wagon_LOGO.png" alt="Rascal Wagon Logo">
+    <h1>The Rascal Wagon</h1>
+    <p>Local Pet Transportation Service</p>
+  </header>
+
+  <section id="booking">
+    <h2>Book a Ride</h2>
+    <form class="booking-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+      <label for="tripType">Trip Type</label>
+      <select id="tripType">
+        <option value="one-way">One Way</option>
+        <option value="round-trip">Round Trip</option>
+      </select>
+
+      <label for="pickup">Pickup Address</label>
+      <input type="text" id="pickup" placeholder="Enter pickup address" required>
+
+      <label for="dropoff">Dropoff Address</label>
+      <input type="text" id="dropoff" placeholder="Enter dropoff address" required>
+
+      <label for="pets">Number of Pets</label>
+      <input type="number" id="pets" min="1" value="1">
+
+      <label>Extras & Surcharges</label>
+      <div>
+        <input type="checkbox" id="extraMiles"> <label for="extraMiles">Additional Miles</label><br>
+        <input type="checkbox" id="waiting"> <label for="waiting">Waiting Time Surcharge</label><br>
+        <input type="checkbox" id="afterHours"> <label for="afterHours">After Hours Surcharge</label><br>
+        <input type="checkbox" id="holiday"> <label for="holiday">Holiday Surcharge</label><br>
+        <input type="checkbox" id="shortNotice"> <label for="shortNotice">Short Notice Surcharge</label><br>
+        <input type="checkbox" id="outOfArea"> <label for="outOfArea">Out of Area Surcharge</label>
+      </div>
+
+      <button type="submit">Submit Booking Request</button>
+    </form>
+  </section>
+
+  <section id="gallery">
+    <h2>Happy Rascals Gallery</h2>
+    <div class="gallery">
+      <img src="https://place-puppy.com/300x300" alt="Pet 1">
+      <img src="https://place-puppy.com/301x301" alt="Pet 2">
+      <img src="https://place-puppy.com/302x302" alt="Pet 3">
+      <img src="https://place-puppy.com/303x303" alt="Pet 4">
+    </div>
+  </section>
+
+  <footer>
+    <div class="contact-info">
+      <p>📞 Phone: (555) 123-4567</p>
+      <p>📧 Email: info@rascalwagon.com</p>
+      <p>🐾 Serving your furry friends with love and care!</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.booking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! Your booking request has been received. We’ll contact you soon!');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
